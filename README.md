@@ -11,3 +11,56 @@ Mini-projet : Installer sur une VM (fournie), un serveur Web en Python Flask fon
 4- Créer la liste des tâches à effectuer
 
 5- Faire un screenshot
+
+# Exercice 2 - Linux
+
+1-Mettre à jour les packages de votre VM ubuntu:
+
+`sudo apt update`
+
+`sudo apt upgrade`
+
+
+2-Vérifier la version de python3 déjà installée:
+
+`python --version`
+
+3-créer un alias nommé python valide pour le user ubuntu de votre VM:
+
+-Ouvrir le fichier .bashrc du user ubuntu:
+
+`sudo nano ~/ .bashrc`
+
+-Ajouter la ligne suivante au fichier
+
+` alias python='python3'`
+
+-Rechargez les modifications faites dans le fichier ~/.bashrc en tapant la commande suivante :
+
+`source ~/ .bashrc`
+
+La commande "python" peut être utilisée pour exécuter le programme "python3" sur la VM.
+
+`python -V`
+
+4- Installer flask:
+
+On doit installé le pip :
+
+ ` sudo apt install pip`
+ 
+Vérifier si pip est bien installé et la version :
+
+  `pip --version` 
+  
+Installer flask :
+
+  ` pip install flask`
+  
+Vérifier si flask est bien installé :
+
+   `flask --version`
+   
+# Exercice 3 - Storage
+
+1- Rechercher le disque supplémentaire de 1Gb connecté à la VM:
