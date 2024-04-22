@@ -64,3 +64,32 @@ Vérifier si flask est bien installé :
 # Exercice 3 - Storage
 
 1- Rechercher le disque supplémentaire de 1Gb connecté à la VM:
+
+Utiliser la commande suivante pour lister les disques et les partitions connectés au système :
+
+`sudo fdisk -l`
+
+Pour trouver directement le disque supplémentaire de 1Gb connecté à la VM utiliser la commande suivante:
+
+   `sudo fdisk -l | grep "1 GiB"`
+
+Formater le disque au format ext4
+
+Vérifier que le disque ne figure pas dans la liste des systèmes de fichiers montés, avec leur point de montage correspondant:
+
+   `df -h`
+
+ formater le disque au format ext4:
+
+  `sudo mkfs -t ext4 /dev/vdc`
+
+ Monter (mount) ce disque sur le point montage /home/ubuntu/projet_Linux/log :
+
+Créez le répertoire de point de montage avec la commande suivante :
+
+  `sudo mkdir log`
+  
+Montez le disque sur le point de montage en utilisant la commande suivante :
+
+  `sudo mount /dev/vdc /home/ubuntu/tp-coaching-webforce3/log`
+  
